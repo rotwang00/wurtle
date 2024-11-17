@@ -7,11 +7,13 @@ Create a clone of the game Wordle.
 
 Rules:
 The computer randomly and secretly chooses a 5-letter word.
-The player inputs a guess word.
+The player inputs a 5-letter guess word.
+The guess must be a real word.
 After each guess, the computer gives feedback.
   Any letter that is in the correct spot has a green background.
   Any letter that is present in the word, but not in the correct spot, has a yellow background.
   All other letters have a grey background.
+  In the case of duplicate letters, green takes precedence over yellow.
 If the word is guessed within 6 tries, the player wins.
 If the word is not guessed within 6 tries, the player loses.
 
@@ -22,7 +24,7 @@ After each guess, the display is updated.
   Any letter that was guessed in the correct spot has a green background.
   Any letter that is present in the word, but not in the correct spot, has a yellow background.
   All other guessed letters have a grey background.
-
+  
 
 Examples
 --------
@@ -34,5 +36,15 @@ Result: P, A, and N would be colored green. L and E would be colored grey.
 Guess: PIANO
 Result: All letters would be colored green. The player would win.
 
+If a letter appears more than once in the secret word, no special information is given to the player when that letter is guessed.
+If the player guesses a word with a duplicate letter, and that letter appears only once in the secret word, only one of the guessed letters changes color.
 
-If a letter appears more than once in the secret word
+
+Data Structures
+---------------
+The secret word will be an array of chars.
+Each guess word will be an array of chars.
+
+
+Algorithm
+---------
