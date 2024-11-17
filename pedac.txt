@@ -1,0 +1,38 @@
+Wurtle - A Wordle Clone
+=======================
+
+Problem
+-------
+Create a clone of the game Wordle. 
+
+Rules:
+The computer randomly and secretly chooses a 5-letter word.
+The player inputs a guess word.
+After each guess, the computer gives feedback.
+  Any letter that is in the correct spot has a green background.
+  Any letter that is present in the word, but not in the correct spot, has a yellow background.
+  All other letters have a grey background.
+If the word is guessed within 6 tries, the player wins.
+If the word is not guessed within 6 tries, the player loses.
+
+There is a seperate display of all the letters of the alphabet.
+This keeps track of guessed letters, as an aid for the player.
+Each letter begins with a white background.
+After each guess, the display is updated.
+  Any letter that was guessed in the correct spot has a green background.
+  Any letter that is present in the word, but not in the correct spot, has a yellow background.
+  All other guessed letters have a grey background.
+
+
+Examples
+--------
+Secret word: PIANO
+Guess: CRANE
+Result: A and N would be colored green. C, R, and E would be colored grey.
+Guess: PLANE
+Result: P, A, and N would be colored green. L and E would be colored grey.
+Guess: PIANO
+Result: All letters would be colored green. The player would win.
+
+
+If a letter appears more than once in the secret word
